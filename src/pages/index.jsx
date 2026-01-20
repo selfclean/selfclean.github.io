@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { Helmet } from 'react-helmet';
 
 import Header from '../components/header.jsx';
+import News from '../components/news.jsx';
 import Overview from '../components/overview.jsx';
 import Video from '../components/video.jsx';
 import Body from '../components/body.jsx';
@@ -63,6 +64,7 @@ class Template extends React.Component {
           theme={data.theme}
         />
         <div className="uk-container uk-container-small">
+          <News updates={data.updates} />
           <Overview
             abstract={data.abstract}
             teaser={data.teaser}
